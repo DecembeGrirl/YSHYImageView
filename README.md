@@ -7,21 +7,25 @@
 并实现 YSHYImageScrollViewDelegate 中的-(void)ShowBigPicture:(NSInteger)index方法
 
 在viewDidLoad 中实例化 YSHYImageScrollView
-yImageScrollView = [[YSHYImageScrollView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width,350 *coefficientHeight)];
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    CGFloat coefficientHeight = self.view.frame.size.height / 670;
+    yImageScrollView = [[YSHYImageScrollView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width,350 *coefficientHeight)];
     yImageScrollView.delegate = self;
     [self.view addSubview:_dynamicScrollView];
 
-    
     _imageArray = [NSMutableArray arrayWithCapacity:4];
     for (int i = 0; i < 8; i ++) {
-        
         UIImage *image  = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg",i+1]];
         [_imageArray addObject:image];
     }
     
     [yImageScrollView ConfigData:_imageArray];
-    
-实现 
+}
+
+
+点击大图
 -(void)ShowBigPicture:(NSInteger)index
 {
     ShowBigViewController *big = [[ShowBigViewController alloc]init];
