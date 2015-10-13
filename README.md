@@ -1,5 +1,6 @@
 # YSHYImageView
-图片显示器
+图片显示器 点击图片计入大图查看模式 支持翻页查看 支持长按删除
+
 导入 
 #import "YSHYImageScrollView.h"
 #import "ShowBigViewController.h"
@@ -27,11 +28,11 @@
 
 点击大图
 
+
 -(void)ShowBigPicture:(NSInteger)index
 {
     ShowBigViewController *big = [[ShowBigViewController alloc]init];
     big.arrayOK = [NSMutableArray arrayWithArray:_imageArray];
     big.currentIndex = index;
     [self presentViewController:big animated:YES completion:nil];
-
 }
