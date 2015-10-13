@@ -26,6 +26,7 @@
 
 
 点击大图
+
 -(void)ShowBigPicture:(NSInteger)index
 {
     ShowBigViewController *big = [[ShowBigViewController alloc]init];
