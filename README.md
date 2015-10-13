@@ -9,7 +9,9 @@
 
 在viewDidLoad 中实例化 YSHYImageScrollView
 
-- (void)viewDidLoad {
+- (void)viewDidLoad 
+{
+
     [super viewDidLoad];
     CGFloat coefficientHeight = self.view.frame.size.height / 670;
     yImageScrollView = [[YSHYImageScrollView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width,350 *coefficientHeight)];
@@ -23,6 +25,7 @@
     }
     
     [yImageScrollView ConfigData:_imageArray];
+    
 }
 
 
@@ -31,8 +34,10 @@
 
 -(void)ShowBigPicture:(NSInteger)index
 {
+
     ShowBigViewController *big = [[ShowBigViewController alloc]init];
     big.arrayOK = [NSMutableArray arrayWithArray:_imageArray];
     big.currentIndex = index;
     [self presentViewController:big animated:YES completion:nil];
+    
 }
