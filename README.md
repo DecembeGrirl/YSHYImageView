@@ -1,5 +1,5 @@
 # YSHYImageView
-图片显示器 点击图片计入大图查看模式 支持翻页查看 支持长按删除
+图片显示器 点击图片进入大图查看模式 支持翻页查看 支持长按删除
 
 导入 
 #import "YSHYImageScrollView.h"
@@ -41,3 +41,6 @@
     [self presentViewController:big animated:YES completion:nil];
     
 }
+
+![image](https://github.com/DecembeGrirl/YSHYImageView/blob/master/YSHYImageView/testImage/YSHYImageView.gif)
+
