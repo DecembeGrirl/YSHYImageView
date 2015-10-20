@@ -44,3 +44,4 @@
 
 ![image](https://github.com/DecembeGrirl/YSHYImageView/blob/master/YSHYImageView/testImage/YSHYImageView.gif)
 
+如何发现问题 欢迎大家提出来 发扬开源精神一起修改
