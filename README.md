@@ -36,9 +36,10 @@
 {
 
     ShowBigViewController *big = [[ShowBigViewController alloc]init];
-    big.arrayOK = [NSMutableArray arrayWithArray:_imageArray];
+    [big ConfigData:_imageArray];
     big.currentIndex = index;
     [self presentViewController:big animated:YES completion:nil];
+
     
 }
 
