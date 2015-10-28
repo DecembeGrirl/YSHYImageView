@@ -64,15 +64,7 @@
         [self createImageViews:i withImage:image];
     }
     
-    CGFloat row ;
-    if(self.images.count % self.itemCounForRw)
-    {
-        row = self.images.count /self.itemCounForRw + 1;
-    }
-    else
-    {
-        row = self.images.count /self.itemCounForRw;
-    }
+    CGFloat row = self.images.count % self.itemCounForRw ?  self.images.count /self.itemCounForRw + 1 :  self.images.count /self.itemCounForRw;
     self.myScrollView.contentSize = CGSizeMake(kScreenWidth, row * cellWidth);
 }
 
@@ -177,15 +169,7 @@
         }
         [imageViews removeObject:imageView];
         [self.images removeObject:image];
-        CGFloat row;
-        if(self.images.count % self.itemCounForRw)
-        {
-            row = self.images.count /self.itemCounForRw + 1;
-        }
-        else
-        {
-            row = self.images.count /self.itemCounForRw;
-        }
+        CGFloat row = self.images.count % self.itemCounForRw ?  self.images.count /self.itemCounForRw + 1 :  self.images.count /self.itemCounForRw;
         weakScroll.contentSize = CGSizeMake(myScrollView.frame.size.width,row* cellWidth);
     }];
 }
@@ -194,7 +178,7 @@
 -(void)Shake:(UIView *)view
 {
     CGAffineTransform shake = CGAffineTransformMakeRotation(0.05);
-    [UIView beginAnimations:@"quake" context:(__bridge void * _Nullable)(view)];
+    [UIView beginAnimations:@"Shake" context:(__bridge void * _Nullable)(view)];
     [UIView setAnimationDuration:0.1];
     [UIView setAnimationRepeatAutoreverses:YES];
     [UIView setAnimationRepeatCount:MAXFLOAT];
