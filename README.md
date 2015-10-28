@@ -1,5 +1,5 @@
 # YSHYImageView
-图片显示器 点击图片进入大图查看模式 支持翻页查看 支持长按删除
+图片显示器 点击图片进入大图查看模式 支持翻页查看 支持长按删除并实现了晃动效果
 
 导入 
 #import "YSHYImageScrollView.h"
