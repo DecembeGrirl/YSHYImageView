@@ -8,14 +8,9 @@
 
 #import "YSHYZoomScrollView.h"
 
-#define ScreenWidth      [[UIScreen mainScreen]bounds].size.width
-#define ScreenHeight     [[UIScreen mainScreen]bounds].size.height
+#define kScreenWidth      [[UIScreen mainScreen]bounds].size.width
+#define kScreenHeight     [[UIScreen mainScreen]bounds].size.height
 
-@interface YSHYZoomScrollView (Utility)
-
-- (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center;
-
-@end
 
 @implementation YSHYZoomScrollView
 
@@ -28,7 +23,7 @@
         self.showsHorizontalScrollIndicator = NO;
         self.showsVerticalScrollIndicator = NO;
         self.delegate = self;
-        self.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
+        self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         
         [self initImageView];
     }
@@ -38,14 +33,14 @@
 - (void)initImageView
 {
     imageView = [[UIImageView alloc]init];
-    imageView.frame = CGRectMake(0, 0, ScreenWidth , ScreenHeight);
+    imageView.frame = CGRectMake(0, 0, kScreenWidth , kScreenHeight);
+    [imageView setCenter:CGPointMake(kScreenWidth/2, kScreenHeight/2)];
     [imageView setBackgroundColor:[UIColor whiteColor]];
-    imageView.contentMode = UIViewContentModeScaleToFill;
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
     imageView.userInteractionEnabled = YES;
     
     [self addSubview:imageView];
    
-    
     UITapGestureRecognizer *tapGesture =[[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                 action:@selector(tapGesture:)];
     [imageView addGestureRecognizer:tapGesture];
@@ -60,17 +55,6 @@
     [self.zoomScrolleViewDelegate tapGesture];
 }
 
-- (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center
-{
-    CGRect zoomRect;
-    zoomRect.size.height = self.frame.size.height / scale;
-    zoomRect.size.width  =  self.frame.size.width  / scale;
-    zoomRect.origin.x = center.x - (zoomRect.size.width  / 2.0);
-    zoomRect.origin.y = center.y - (zoomRect.size.height / 2.0);
-    return zoomRect;
-}
-
-
 #pragma mark - UIScrollViewDelegate
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
@@ -84,6 +68,14 @@
     [scrollView setZoomScale:scale animated:NO];
 }
 
+//实现图片在缩放过程中居中
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView
+{
+    CGFloat offsetX = (scrollView.bounds.size.width > scrollView.contentSize.width)?(scrollView.bounds.size.width - scrollView.contentSize.width)/2 : 0.0;
+    CGFloat offsetY = (scrollView.bounds.size.height > scrollView.contentSize.height)?(scrollView.bounds.size.height - scrollView.contentSize.height)/2 : 0.0;
+    imageView.center = CGPointMake(scrollView.contentSize.width/2 + offsetX,scrollView.contentSize.height/2 + offsetY);
+    
+}
 
 
 @end

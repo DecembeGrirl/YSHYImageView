@@ -28,6 +28,7 @@
 		E57A629B1BCCDA5B00980121 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E57A62921BCCDA5B00980121 /* 8.jpg */; settings = {ASSET_TAGS = (); }; };
 		E57A629C1BCCDA5B00980121 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E57A62931BCCDA5B00980121 /* 9.jpg */; settings = {ASSET_TAGS = (); }; };
 		E57A62A01BCCE3E900980121 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = E57A629F1BCCE3E900980121 /* delete.png */; settings = {ASSET_TAGS = (); }; };
+		E599262B1BD4EBA500E6F7B5 /* YSHYImageView.gif in Resources */ = {isa = PBXBuildFile; fileRef = E599262A1BD4EBA500E6F7B5 /* YSHYImageView.gif */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		E57A62921BCCDA5B00980121 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		E57A62931BCCDA5B00980121 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
 		E57A629F1BCCE3E900980121 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		E599262A1BD4EBA500E6F7B5 /* YSHYImageView.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = YSHYImageView.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 		E57A628A1BCCDA5B00980121 /* testImage */ = {
 			isa = PBXGroup;
 			children = (
+				E599262A1BD4EBA500E6F7B5 /* YSHYImageView.gif */,
 				E57A629F1BCCE3E900980121 /* delete.png */,
 				E57A628B1BCCDA5B00980121 /* 1.jpg */,
 				E57A628C1BCCDA5B00980121 /* 2.jpg */,
@@ -316,6 +319,7 @@
 				E57A629A1BCCDA5B00980121 /* 7.jpg in Resources */,
 				E57A629C1BCCDA5B00980121 /* 9.jpg in Resources */,
 				E57A625B1BCCD98D00980121 /* Assets.xcassets in Resources */,
+				E599262B1BD4EBA500E6F7B5 /* YSHYImageView.gif in Resources */,
 				E57A62591BCCD98D00980121 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

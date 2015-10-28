@@ -15,6 +15,9 @@
 @end
 
 @interface YSHYImageScrollView : UIView<UIGestureRecognizerDelegate,UIScrollViewDelegate>
+@property (nonatomic, assign)NSInteger itemCounForRw; //每一行有几个item
+@property (nonatomic, assign)NSInteger itemSpace;     //itme之间的间隔
+
 @property(nonatomic,retain)UIScrollView *myScrollView;
 
 @property(nonatomic,retain)NSMutableArray *images;

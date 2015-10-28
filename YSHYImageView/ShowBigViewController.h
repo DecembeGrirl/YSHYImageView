@@ -19,25 +19,19 @@
 @property (assign, nonatomic) bool stateOfSelect;
 @property (strong, nonatomic) UIButton * button;
 @property (assign, nonatomic) int theOrder;
-
-
-
 @end
 
 #pragma mark - ShowBigViewController
 @interface ShowBigViewController : UIViewController<UIScrollViewDelegate,UINavigationControllerDelegate,YSHYZoomScrollViewDelegate>
 {
-    UINavigationBar *mynavigationBar;
-     UIImageView    *_imagvtitle;
-   
-    UIButton        *rightbtn;
     UIScrollView    *_scrollerview;
-    UIButton        *_btnOK;
     UIPageControl  *_pageControl;
+    NSMutableArray *_bigImageArray;
 }
 
-@property(nonatomic,strong) NSMutableArray *arrayOK;     //选中的图片数组
 @property (nonatomic, assign)NSInteger currentIndex;
+-(void)ConfigData:(NSArray *)array;
+
 @end
 
 
