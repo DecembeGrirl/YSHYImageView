@@ -64,7 +64,7 @@
         [self createImageViews:i withImage:image];
     }
     
-    CGFloat row;
+    CGFloat row ;
     if(self.images.count % self.itemCounForRw)
     {
         row = self.images.count /self.itemCounForRw + 1;
@@ -177,7 +177,16 @@
         }
         [imageViews removeObject:imageView];
         [self.images removeObject:image];
-        weakScroll.contentSize = CGSizeMake(myScrollView.frame.size.width,(self.images.count/2 + self.imageViews.count %2)* cellWidth);
+        CGFloat row;
+        if(self.images.count % self.itemCounForRw)
+        {
+            row = self.images.count /self.itemCounForRw + 1;
+        }
+        else
+        {
+            row = self.images.count /self.itemCounForRw;
+        }
+        weakScroll.contentSize = CGSizeMake(myScrollView.frame.size.width,row* cellWidth);
     }];
 }
 
