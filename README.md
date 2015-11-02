@@ -55,4 +55,4 @@
 
 ![image](https://github.com/DecembeGrirl/YSHYImageView/blob/master/YSHYImageView/testImage/YSHYImage.gif)
 
-如果发现问题 欢迎大家提出来 发扬开源精神一起修改
+如果发现问题或者有任何建议欢迎大家提出来,让我们发扬开源精神一起改进
