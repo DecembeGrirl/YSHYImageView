@@ -117,6 +117,12 @@
 {
     self.currentPoint = _scrollerview.contentOffset;
     int b = self.currentPoint.x/_scrollerview.frame.size.width + 1 ;
+    // 添加越界处理
+    if (b<1) {
+        b=1;
+    }else if (b>_bigImageArray.count){
+        b =_bigImageArray.count ;
+    }
     self.lastZoomScrollView = self.currentZoomScrollView;
     self.currentZoomScrollView = scrollView.subviews[b-1];
     if(![self.lastZoomScrollView isEqual:self.currentZoomScrollView])
