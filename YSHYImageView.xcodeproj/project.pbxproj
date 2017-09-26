@@ -271,7 +271,6 @@
 				TargetAttributes = {
 					E57A624A1BCCD98C00980121 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = CV6BXNLMXG;
 					};
 					E57A62631BCCD98D00980121 = {
 						CreatedOnToolsVersion = 7.0;
@@ -492,7 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CV6BXNLMXG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YSHYImageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -505,7 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CV6BXNLMXG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YSHYImageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
